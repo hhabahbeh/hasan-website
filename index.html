@@ -169,13 +169,36 @@
     overflow: hidden;
     transition: max-height 0.35s ease;
   }
-  .acc-item.open .acc-body { max-height: 200px; }
+  .acc-item.open .acc-body { max-height: 120px; }
 
   .acc-content {
     padding: 0 18px 18px 68px;
     font-size: 0.82rem;
+    line-height: 1.8;
+  }
+
+  .acc-license {
+    color: var(--gold-light);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .acc-company {
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .acc-address {
     color: var(--muted);
-    line-height: 1.7;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .acc-address svg {
+    flex-shrink: 0;
+    margin-top: 2px;
   }
 
   /* Services */
@@ -249,7 +272,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.86 19.86 0 013.09 4.18 2 2 0 015.07 2h3a2 2 0 012 1.72c.127.96.362 1.9.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006.99 6.99l1.27-1.27a2 2 0 012.11-.45c.91.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       Call
     </a>
-    <a href="mailto:hasan@example.com" class="btn btn-email">
+    <a href="/cdn-cgi/l/email-protection#9ef6ffedfff0defbe6fff3eef2fbb0fdf1f3" class="btn btn-email">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       Email
     </a>
@@ -265,7 +288,14 @@
         <span class="acc-arrow">▼</span>
       </div>
       <div class="acc-body">
-        <div class="acc-content">Helping you buy, sell, or invest in residential and commercial properties with expert market insight and personalized guidance.</div>
+        <div class="acc-content">
+          <div class="acc-license">License #: 478.025454</div>
+          <div class="acc-company">Midwest Realty Services Inc</div>
+          <div class="acc-address">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            700 Commerce Drive Suite 500, Oak Brook, IL 60523
+          </div>
+        </div>
       </div>
     </div>
 
@@ -276,7 +306,14 @@
         <span class="acc-arrow">▼</span>
       </div>
       <div class="acc-body">
-        <div class="acc-content">Access to the best mortgage rates across multiple lenders. I simplify the approval process and negotiate on your behalf.</div>
+        <div class="acc-content">
+          <div class="acc-license">NMLS ID: 2430139</div>
+          <div class="acc-company">E.D.S. Express Services, Inc.</div>
+          <div class="acc-address">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            15705 Lake Hills Ct Unit 1S, Orland Park, IL 60462
+          </div>
+        </div>
       </div>
     </div>
 
@@ -287,7 +324,14 @@
         <span class="acc-arrow">▼</span>
       </div>
       <div class="acc-body">
-        <div class="acc-content">Comprehensive coverage for your home, vehicle, and life. I shop the market so you get the best protection at the right price.</div>
+        <div class="acc-content">
+          <div class="acc-license">License #: 105181126</div>
+          <div class="acc-company">A Pointe Insurance</div>
+          <div class="acc-address">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            1 Tiffany Pointe Suite 202, Bloomingdale, IL 60108
+          </div>
+        </div>
       </div>
     </div>
 
@@ -298,7 +342,13 @@
         <span class="acc-arrow">▼</span>
       </div>
       <div class="acc-body">
-        <div class="acc-content">From finding the right vehicle to financing and protection plans — I handle every step of your auto purchase with transparency.</div>
+        <div class="acc-content">
+          <div class="acc-company">Harvey Auto Sales Corp</div>
+          <div class="acc-address">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            14937 Dixie Hwy, Harvey, IL 60426
+          </div>
+        </div>
       </div>
     </div>
 
@@ -323,9 +373,7 @@
 
 <script>
   function toggle(item) {
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.acc-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    item.classList.toggle('open');
   }
 </script>
 </body>
